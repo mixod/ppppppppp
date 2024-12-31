@@ -1,29 +1,35 @@
-import { useState } from "react";
+import { useState } from "react"
+
 
 function Calc() {
-  const [color, setColor] = useState();
+  const [state,setState]= useState();
+  const [value1,setValue1]= useState();
+  const [value2,setValue2]= useState();
 
-  const red = () => {
-    setColor("red");
-  };
-  const green = () => {
-    setColor("green");
-  };
+  function add(){
+    const result=value1+value2;
+    setState(result);
+  }
 
+   function firstnumber(e){
+    const result=parseInt(e.target.value);
+    setValue1(result);
+   }
+   function secondnumber(e){
+    const result=parseInt(e.target.value);
+    setValue2(result);
+   }
+  
+  
   return (
     <>
-      <h1>My favourite color is {color} </h1>
-      <button onClick={() => setColor("Black")}>black</button>
-      <button onClick={() => setColor("white")}>white</button>
-      <button onClick={() => setColor("pink")}>pink</button>
-      <button onClick={red}>red</button>
-      <button onClick={green}>green</button>
-      <button onClick={() => setColor("yellow")}>yellow</button>
-      <button onClick={() => setColor("blue")}>blue</button>
+    <input type="number" onChange={firstnumber}></input>
+    <input type="number" onChange={secondnumber}></input>
+    <button onClick={add}>Add</button>
+    <div>result:{state} </div>
 
-      <button onClick={() => setColor("nocolor")}>nocolor</button>
     </>
-  );
+  )
 }
 
-export default Calc;
+export default Calc
