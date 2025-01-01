@@ -27,13 +27,16 @@ import { useState } from "react"
 
 function Calc() {
   const [color,setColor]=useState(" ");
-
+  const yellow=()=>{
+    setColor("yellow");
+  }
 
   return (
    <>
    <h2>My favourite color is {color}</h2>
 
    <button onClick={()=>setColor("red")}>RED</button>
+   <button onClick={yellow}>Yellow</button>
 
    
    
