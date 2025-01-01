@@ -118,4 +118,46 @@ function Calc() {
   )
 }
 
-export default Calc
+ export default Calc
+
+// import { useState } from "react";
+// import './App.css'
+
+// function Card() {
+//     const initialState={
+//         Fathername:"Ram Hari Thapa",
+//         Mothername:"Kopila Thapa",
+//         Sonname:"Anish Thapa"
+//       };
+//     const [state,setState]=useState(initialState);
+
+//     const changeState={
+//         Fathername:"Shyam Thapa",
+//         Mothername:"Radika Thapa",
+//         Daughtername:"Pranisha Thapa"
+//       };
+//     const change=()=>{
+
+//         setState(changeState)
+//     }
+
+//     const reset=()=>{
+//         setState(initialState)
+//     }
+//   return (
+//     <>
+//     <div>
+//        <spam> Father's Name:{state.Fathername}</spam><br/>
+//        <spam> Mother's Name:{state.Mothername}</spam><br/>
+//         {state.Sonname && <spam>Son's Name:{state.Sonname}</spam>}
+//         {state.Daughtername && <spam> Daughter's name:{state.Daughtername}</spam>}
+//     </div>
+//     <div>
+//     <button onClick={change}>NEXT INFORMATION</button>
+//     <button onClick={reset}>RESET</button>
+//     </div>
+//     </>
+//   )
+// }
+
+// export default Card
