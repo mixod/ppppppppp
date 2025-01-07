@@ -167,12 +167,15 @@ import { useState } from "react"
 
 function Calc() {
   const [color,setColor]=useState();
-
+  const green=()=>{
+    setColor("green");
+  }
   
   return (
     <>
     <h1>My Favourite Color {color}</h1>
     <button onClick={()=>setColor("RED")}>RED</button>
+    <button onClick={green}>Green</button>
     </>
   )
 }
