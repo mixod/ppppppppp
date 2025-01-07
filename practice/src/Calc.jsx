@@ -4,6 +4,8 @@ import { useState } from "react"
 
 // import { useState } from "react"
 
+// import { useState } from "react"
+
 
 
 // // function Calc() {
@@ -165,17 +167,55 @@ import { useState } from "react"
 // export default Card
 
 
-function Calc() {
-  const [color,setColor]=useState();
-  const green=()=>{
-    setColor("green");
-  }
+// function Calc() {
+//   const [color,setColor]=useState();
+//   const green=()=>{
+//     setColor("green");
+//   }
   
+//   return (
+//     <>
+//     <h1>My Favourite Color {color}</h1>
+//     <button onClick={()=>setColor("RED")}>RED</button>
+//     <button onClick={green}>Green</button>
+//     </>
+//   )
+// }
+
+// export default Calc
+
+
+function Calc() {
+  const [state, setState]=useState(" ");
+  const [value, setValue]=useState(" ");
+  const [value1, setValue1]=useState(" ");
+
+
+    const add=()=>{
+      const result=value+value1;
+      setState(result);
+    }
+
+    const firstnumber=(e)=>{
+          const num=parseInt(e.target.value);
+          setValue(num);
+
+    }
+    
+    const secondnumber=(e)=>{
+      const number=parseInt(e.target.value);
+      setValue1(number);
+
+}
+
+
   return (
     <>
-    <h1>My Favourite Color {color}</h1>
-    <button onClick={()=>setColor("RED")}>RED</button>
-    <button onClick={green}>Green</button>
+    <input type="number" onChange={firstnumber}></input>
+    <input type="number" onChange={secondnumber}></input>
+    <button onClick={add}>ADD</button>
+    <div>Result:{state}</div>
+    
     </>
   )
 }
