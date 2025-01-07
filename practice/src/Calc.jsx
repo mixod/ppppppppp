@@ -230,7 +230,7 @@ const reset=()=>{
   return (
     <>
     <input type="number" onChange={firstnumber} value={value}></input>
-    <input type="number" onChange={secondnumber} value={value}></input>
+    <input type="number" onChange={secondnumber} value={value1}></input>
     <button onClick={add}>ADD</button>
     <button onClick={sub}>sub</button>
     <button onClick={mul}>mul</button>
