@@ -195,6 +195,18 @@ function Calc() {
       const result=value+value1;
       setState(result);
     }
+    const sub=()=>{
+      const result=value-value1;
+      setState(result);
+    }
+    const mul=()=>{
+      const result=value*value1;
+      setState(result);
+    }
+    const div=()=>{
+      const result=value/value1;
+      setState(result);
+    }
 
     const firstnumber=(e)=>{
           const num=parseInt(e.target.value);
@@ -207,13 +219,24 @@ function Calc() {
       setValue1(number);
 
 }
+const reset=()=>{
+  setState(" ");
+  setValue(" ");
+  setValue1(" ");
+
+}
 
 
   return (
     <>
-    <input type="number" onChange={firstnumber}></input>
-    <input type="number" onChange={secondnumber}></input>
+    <input type="number" onChange={firstnumber} value={value}></input>
+    <input type="number" onChange={secondnumber} value={value}></input>
     <button onClick={add}>ADD</button>
+    <button onClick={sub}>sub</button>
+    <button onClick={mul}>mul</button>
+    <button onClick={div}>div</button>
+    <button onClick={reset}>AC</button>
+    
     <div>Result:{state}</div>
     
     </>
