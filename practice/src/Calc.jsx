@@ -1,5 +1,7 @@
 // import { useState } from "react"
 
+import { useState } from "react"
+
 // import { useState } from "react"
 
 
@@ -91,34 +93,34 @@
 
 
 
-import { useState } from "react"
+// import { useState } from "react"
 
-function Calc() {
-  const initstae="thid is home page"
+// function Calc() {
+//   const initstae="thid is home page"
 
-  const [state,setState]=useState(initstae);
+//   const [state,setState]=useState(initstae);
 
 
-  const changePage=()=>{
-    setState("this is another page");
-  }
-  const reset=()=>{
-    setState(initstae);
-  }
-  return (
-    <>
-    <div>{state}</div>
-    <button onClick={changePage}>click for net page</button>
-    {state === "this is another page" &&(
-      <button onClick={reset}>click</button>
-    )
-    }
+//   const changePage=()=>{
+//     setState("this is another page");
+//   }
+//   const reset=()=>{
+//     setState(initstae);
+//   }
+//   return (
+//     <>
+//     <div>{state}</div>
+//     <button onClick={changePage}>click for net page</button>
+//     {state === "this is another page" &&(
+//       <button onClick={reset}>click</button>
+//     )
+//     }
     
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
- export default Calc
+//  export default Calc
 
 // import { useState } from "react";
 // import './App.css'
@@ -161,3 +163,18 @@ function Calc() {
 // }
 
 // export default Card
+
+
+function Calc() {
+  const [color,setColor]=useState();
+
+  
+  return (
+    <>
+    <h1>My Favourite Color {color}</h1>
+    <button onClick={()=>setColor("RED")}>RED</button>
+    </>
+  )
+}
+
+export default Calc
