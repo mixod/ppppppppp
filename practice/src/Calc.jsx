@@ -75,22 +75,22 @@ import { useState } from "react"
 // }
 
 // const secondnum=(e)=>{
-//   const b=parseInt(e.target.value);
-//   setValue2(b);
-// }
+// //   const b=parseInt(e.target.value);
+// //   setValue2(b);
+// // }
 
-//   return (
-//     <>
-//   <input type="number" onChange={firstnum}></input>
-//   <input type="number"onChange={secondnum}></input>
-//   <button onClick={add}>ADD</button>
-//   <div>Rsult{state}</div>
+// //   return (
+// //     <>
+// //   <input type="number" onChange={firstnum}></input>
+// //   <input type="number"onChange={secondnum}></input>
+// //   <button onClick={add}>ADD</button>
+// //   <div>Rsult{state}</div>
 
-//     </>
-//   )
-// }
+// //     </>
+// //   )
+// // }
 
-// export default Calc
+// // export default Calc
 
 
 
@@ -124,45 +124,45 @@ import { useState } from "react"
 
 //  export default Calc
 
-// import { useState } from "react";
-// import './App.css'
+import { useState } from "react";
+import './App.css'
 
-// function Card() {
-//     const initialState={
-//         Fathername:"Ram Hari Thapa",
-//         Mothername:"Kopila Thapa",
-//         Sonname:"Anish Thapa"
-//       };
-//     const [state,setState]=useState(initialState);
+function Card() {
+    const initialState={
+        Fathername:"Ram Hari Thapa",
+        Mothername:"Kopila Thapa",
+        Sonname:"Anish Thapa"
+      };
+    const [state,setState]=useState(initialState);
 
-//     const changeState={
-//         Fathername:"Shyam Thapa",
-//         Mothername:"Radika Thapa",
-//         Daughtername:"Pranisha Thapa"
-//       };
-//     const change=()=>{
+    const changeState={
+        Fathername:"Shyam Thapa",
+        Mothername:"Radika Thapa",
+        Daughtername:"Pranisha Thapa"
+      };
+    const change=()=>{
 
-//         setState(changeState)
-//     }
+        setState(changeState)
+    }
 
-//     const reset=()=>{
-//         setState(initialState)
-//     }
-//   return (
-//     <>
-//     <div>
-//        <spam> Father's Name:{state.Fathername}</spam><br/>
-//        <spam> Mother's Name:{state.Mothername}</spam><br/>
-//         {state.Sonname && <spam>Son's Name:{state.Sonname}</spam>}
-//         {state.Daughtername && <spam> Daughter's name:{state.Daughtername}</spam>}
-//     </div>
-//     <div>
-//     <button onClick={change}>NEXT INFORMATION</button>
-//     <button onClick={reset}>RESET</button>
-//     </div>
-//     </>
-//   )
-// }
+    const reset=()=>{
+        setState(initialState)
+    }
+  return (
+    <>
+    <div>
+       <spam> Father's Name:{state.Fathername}</spam><br/>
+       <spam> Mother's Name:{state.Mothername}</spam><br/>
+        {state.Sonname && <spam>Son's Name:{state.Sonname}</spam>}
+        {state.Daughtername && <spam> Daughter's name:{state.Daughtername}</spam>}
+    </div>
+    <div>
+    <button onClick={change}>NEXT INFORMATION</button>
+    <button onClick={reset}>RESET</button>
+    </div>
+    </>
+  )
+}
 
 // export default Card
 
@@ -178,69 +178,69 @@ import { useState } from "react"
 //     <h1>My Favourite Color {color}</h1>
 //     <button onClick={()=>setColor("RED")}>RED</button>
 //     <button onClick={green}>Green</button>
+// //     </>
+// //   )
+// // }
+
+// // export default Calc
+
+
+// function Calc() {
+//   const [state, setState]=useState(" ");
+//   const [value, setValue]=useState(" ");
+//   const [value1, setValue1]=useState(" ");
+
+
+//     const add=()=>{
+//       const result=value+value1;
+//       setState(result);
+//     }
+//     const sub=()=>{
+//       const result=value-value1;
+//       setState(result);
+//     }
+//     const mul=()=>{ 
+//       const result=value*value1;
+//       setState(result);
+//     }
+//     const div=()=>{
+//       const result=value/value1;
+//       setState(result);
+//     }
+
+//     const firstnumber=(e)=>{
+//           const num=parseInt(e.target.value);
+//           setValue(num);
+
+//     }
+    
+//     const secondnumber=(e)=>{
+//       const number=parseInt(e.target.value);
+//       setValue1(number);
+
+// }
+// const reset=()=>{
+//   setState(" ");
+//   setValue(" ");
+//   setValue1(" ");
+
+// }
+
+
+//   return (
+//     <>
+//     <input type="number" onChange={firstnumber} value={value}></input>
+//     <input type="number" onChange={secondnumber} value={value1}></input>
+//     <button onClick={add}>ADD</button>
+//     <button onClick={sub}>sub</button>
+//     <button onClick={mul}>mul</button>
+//     <button onClick={div}>div</button>
+//     <button onClick={reset}>AC</button>
+    
+//     <div>Result:{state}</div>
+    
 //     </>
 //   )
 // }
 
 // export default Calc
-
-
-function Calc() {
-  const [state, setState]=useState(" ");
-  const [value, setValue]=useState(" ");
-  const [value1, setValue1]=useState(" ");
-
-
-    const add=()=>{
-      const result=value+value1;
-      setState(result);
-    }
-    const sub=()=>{
-      const result=value-value1;
-      setState(result);
-    }
-    const mul=()=>{
-      const result=value*value1;
-      setState(result);
-    }
-    const div=()=>{
-      const result=value/value1;
-      setState(result);
-    }
-
-    const firstnumber=(e)=>{
-          const num=parseInt(e.target.value);
-          setValue(num);
-
-    }
-    
-    const secondnumber=(e)=>{
-      const number=parseInt(e.target.value);
-      setValue1(number);
-
-}
-const reset=()=>{
-  setState(" ");
-  setValue(" ");
-  setValue1(" ");
-
-}
-
-
-  return (
-    <>
-    <input type="number" onChange={firstnumber} value={value}></input>
-    <input type="number" onChange={secondnumber} value={value1}></input>
-    <button onClick={add}>ADD</button>
-    <button onClick={sub}>sub</button>
-    <button onClick={mul}>mul</button>
-    <button onClick={div}>div</button>
-    <button onClick={reset}>AC</button>
-    
-    <div>Result:{state}</div>
-    
-    </>
-  )
-}
-
-export default Calc
